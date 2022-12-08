@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="DarkenRoundedBackgroundFrameLayout">
+
+        <attr name="round_number" format="float" />
+        <attr name="background_alpha" format="float" />
+        <attr name="round_back_color" format="color" />
+        <attr name="round_type" format="enum">
+            <enum name="TOP" value="0" />
+            <enum name="ALL" value="1" />
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="MotionRoundedBitmapFrameLayout">
+        <attr name="blur" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="RangeSeekBar">
+        <!--RangeSeekBar common attrs-->
+
+        <!--The maximum-->
+        <attr name="rsb_max" format="float" />
+
+        <!--The minimum-->
+        <attr name="rsb_min" format="float" />
+
+        <!--RangeSeekBar mode, single is normal seekBar, range is RangeSeekBar-->
+        <attr name="rsb_mode" format="enum">
+            <enum name="single" value="1" />
+            <enum name="range" value="2" />
+        </attr>
+
+        <!--The min interval of the thumbs -->
+        <attr name="rsb_range_interval" format="float" />
+
+        <!-- 0 for the normal mode, greater than 1 to switch to scale mode-->
+        <attr name="rsb_tick_mark_number" format="integer" />
+
+        <!--Scale mode
+        Number according to the scale of the actual proportion of the distribution of the location (markTextArray must be a number)
+        Other bisects the current layout (markTextArray can be any character)
+        -->
+        <attr name="rsb_tick_mark_mode" format="enum">
+            <enum name="number" value="0" />
+            <enum name="other" value="1" />
+        </attr>
+
+        <!--The tick mark text gravity -->
+        <attr name="rsb_tick_mark_gravity" format="enum">
+            <enum name="left" value="0" />
+            <enum name="center" value="1" />
+            <enum name="right" value="2" />
+        </attr>
+
+        <!--The tick mark text array -->
+        <attr name="rsb_tick_mark_text_array" format="reference" />
+
+        <!--The tick mark text margin bottom to progress -->
+        <attr name="rsb_tick_mark_text_margin" format="dimension" />
+
+        <attr name="rsb_tick_mark_text_size" format="dimension" />
+
+        <attr name="rsb_tick_mark_text_color" format="color" />
+
+        <!--it just work in range && number mode now-->
+        <attr name="rsb_tick_mark_in_range_text_color" format="color" />
+
+        <attr name="rsb_progress_height" format="dimension" />
+
+        <attr name="rsb_progress_radius" format="dimension" />
+
+        <!--the color of progress bar when in progress-->
+        <attr name="rsb_progress_color" format="color" />
+
+        <!--the default color of the progress bar-->
+        <attr name="rsb_progress_default_color" format="color" />
+
+        <!--the vertical RangeSeekBar draw orientation-->
+        <attr name="rsb_orientation" format="enum">
+            <enum name="left" value="-1" />
+            <enum name="right" value="1" />
+        </attr>
+
+        <!--SeekBar attrs-->
+        <attr name="rsb_indicator_show_mode" format="enum">
+            <enum name="showWhenTouch" value="0" />
+            <enum name="alwaysHide" value="1" />
+            <enum name="alwaysShowAfterTouch" value="2" />
+            <enum name="alwaysShow" value="3" />
+        </attr>
+        <attr name="rsb_indicator_height" format="dimension" />
+        <attr name="rsb_indicator_width" format="dimension" />
+        <!--indicator margin bottom to progress bar-->
+        <attr name="rsb_indicator_margin" format="dimension" />
+        <attr name="rsb_indicator_text_size" format="dimension" />
+        <attr name="rsb_indicator_text_color" format="color" />
+        <!--indicator arrow size, it just work when you not use rsb_indicator_drawable -->
+        <attr name="rsb_indicator_arrow_size" format="dimension" />
+        <!-- must use 9 path ！！！-->
+        <attr name="rsb_indicator_drawable" format="reference" />
+        <attr name="rsb_indicator_background_color" format="color" />
+        <attr name="rsb_indicator_padding_left" format="dimension" />
+        <attr name="rsb_indicator_padding_right" format="dimension" />
+        <attr name="rsb_indicator_padding_top" format="dimension" />
+        <attr name="rsb_indicator_padding_bottom" format="dimension" />
+        <attr name="rsb_indicator_radius" format="dimension" />
+        <attr name="rsb_thumb_drawable" format="reference" />
+        <!--the thumb inactivated is when you don't touch the thumb button-->
+        <attr name="rsb_thumb_inactivated_drawable" format="reference" />
+        <attr name="rsb_thumb_size" format="dimension" />
+        <attr name="rsb_thumb_scale_ratio" format="float" />
+    </declare-styleable>
+    <!-- Don't touch this -->
+    <attr name="numberPickerStyle" format="reference" />
+
+    <declare-styleable name="NumberPicker">
+        <attr name="np_width" format="dimension" />
+        <attr name="np_height" format="dimension" />
+        <attr name="np_divider" format="reference" />
+        <attr name="np_dividerColor" format="color" />
+        <attr name="np_dividerDistance" format="dimension" />
+        <attr name="np_dividerThickness" format="dimension" />
+        <attr name="np_fadingEdgeEnabled" format="boolean" />
+        <attr name="np_fadingEdgeStrength" format="float" />
+        <attr name="np_formatter" format="string" />
+        <attr name="np_hideWheelUntilFocused" format="boolean" />
+        <attr name="np_lineSpacingMultiplier" format="float" />
+        <attr name="np_max" format="integer" />
+        <attr name="np_max_fling_velocity_coefficient" format="integer" />
+        <attr name="np_min" format="integer" />
+        <attr name="np_order" format="enum">
+            <enum name="ascending" value="0" />
+            <enum name="descending" value="1" />
+        </attr>
+        <attr name="np_orientation" format="enum">
+            <enum name="horizontal" value="0" />
+            <enum name="vertical" value="1" />
+        </attr>
+        <attr name="np_scrollerEnabled" format="boolean" />
+        <attr name="np_selectedTextAlign" format="enum">
+            <enum name="selectedTextAlignRight" value="0" />
+            <enum name="selectedTextAlignCenter" value="1" />
+            <enum name="selectedTextAlignLeft" value="2" />
+        </attr>
+        <attr name="np_selectedTextColor" format="color" />
+        <attr name="np_selectedTextSize" format="dimension" />
+        <attr name="np_selectedTextStrikeThru" format="boolean" />
+        <attr name="np_selectedTextUnderline" format="boolean" />
+        <attr name="np_textAlign" format="enum">
+            <enum name="textAlignRight" value="0" />
+            <enum name="textAlignCenter" value="1" />
+            <enum name="textAlignLeft" value="2" />
+        </attr>
+        <attr name="np_textColor" format="color" />
+        <attr name="np_textSize" format="dimension" />
+        <attr name="np_textStrikeThru" format="boolean" />
+        <attr name="np_textUnderline" format="boolean" />
+        <attr name="np_typeface" format="string" />
+        <attr name="np_value" format="integer" />
+        <attr name="np_wheelItemCount" format="integer" />
+        <attr name="np_wrapSelectorWheel" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="InsettableFrameLayout_Layout">
+        <attr name="layout_ignoreInsets" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="AVLoadingIndicatorView">
+        <attr name="minWidth" format="dimension" />
+        <attr name="maxWidth" format="dimension" />
+        <attr name="minHeight" format="dimension" />
+        <attr name="maxHeight" format="dimension" />
+        <attr name="indicatorName" format="string" />
+        <attr name="indicatorColor" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="BubbleLayout">
+        <attr name="lookAt">
+            <enum name="left" value="1" />
+            <enum name="top" value="2" />
+            <enum name="right" value="3" />
+            <enum name="bottom" value="4" />
+        </attr>
+
+        <attr name="lookPosition" format="dimension" />
+        <attr name="lookWidth" format="dimension" />
+        <attr name="lookLength" format="dimension" />
+        <attr name="bubbleColor" format="color" />
+        <attr name="bubbleRadius" format="dimension" />
+        <attr name="bubbleLeftTopRadius" format="dimension" />
+        <attr name="bubbleRightTopRadius" format="dimension" />
+        <attr name="bubbleRightDownRadius" format="dimension" />
+        <attr name="bubbleLeftDownRadius" format="dimension" />
+        <attr name="bubblePadding" format="dimension" />
+        <attr name="shadowRadius" format="dimension" />
+        <attr name="shadowX" format="dimension" />
+        <attr name="shadowY" format="dimension" />
+        <attr name="shadowColor" format="color" />
+
+        <attr name="bubbleArrowTopLeftRadius" format="dimension" />
+        <attr name="bubbleArrowTopRightRadius" format="dimension" />
+        <attr name="bubbleArrowDownLeftRadius" format="dimension" />
+        <attr name="bubbleArrowDownRightRadius" format="dimension" />
+
+        <attr name="bubbleBgRes" format="reference" />
+
+        <attr name="bubbleBorderColor" format="color" />
+        <attr name="bubbleBorderSize" format="dimension" />
+    </declare-styleable>
+</resources>
